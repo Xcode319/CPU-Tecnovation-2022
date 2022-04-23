@@ -48,6 +48,9 @@ todos = JSON.parse(localStorage.getItem("todo-list"));
 
 
 var completedNumber=0,pendingNumber=0;
+
+
+if(todos) {
 todos.forEach((todo, id) => {
     if(todo.status=="pending"){
         pendingNumber = pendingNumber+1;
@@ -55,6 +58,7 @@ todos.forEach((todo, id) => {
         completedNumber= completedNumber+1;
     }
 });
+};
 
 
 
@@ -63,6 +67,8 @@ box2 = document.querySelector(".box2 .number"),
 box3 = document.querySelector(".box3 .number");
 function updateNumbers(){
     var completedNumber=0,pendingNumber=0;
+
+    if(todos) {
     todos.forEach((todo, id) => {
         if(todo.status=="pending"){
             pendingNumber = pendingNumber+1;
@@ -73,6 +79,7 @@ function updateNumbers(){
     box1.textContent=`${todos.length}`;
     box2.textContent=`${pendingNumber}`;
     box3.textContent=`${completedNumber}`;
+}
     
 }
 
