@@ -422,6 +422,7 @@ nav.close ~ .dashboard .top{
     }
     nav.close{
         width: 73px;
+        padding-block: 3rem;
     }
     nav .logo_name{
         opacity: 0;
